@@ -72,13 +72,4 @@ function setupEventListeners() {
 
 document.addEventListener("DOMContentLoaded", () => {
   setupEventListeners();
-
-  /*
-  const container = document.getElementById("chat-container");
-  if (container) {
-    const chatUI = new ChatUI();
-    // Beispiel:
-    // chatUI.renderConversation(container, { id: "1", name: "Me", group_id: "1" }, { id: "2", name: "Bob", group_id: "1" });
-  }
-  */
 });
