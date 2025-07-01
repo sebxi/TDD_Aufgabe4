@@ -58,11 +58,10 @@ export class ChatUI {
         }
         // Optionally reset form
         (event.target as HTMLFormElement).reset();
-      } else {
-        if (regResultDiv) {
+      } else if (regResultDiv) {
           regResultDiv.textContent = `Registration failed: ${response.error || "Unknown error"}`;
         }
-      }
+      
     } catch (err) {
       console.error("handleRegister Error:", err);
       if (regResultDiv) regResultDiv.textContent = "Network or server error.";
