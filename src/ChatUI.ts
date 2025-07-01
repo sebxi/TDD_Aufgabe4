@@ -2,7 +2,7 @@
 
 import { ApiService } from "./ApiService.js";
 import { StateManager } from "./StateManager.js";
-import type { User, ApiResponse } from "./ApiService.js";
+import type { User } from "./ApiService.js";
 
 export class ChatUI {
 
