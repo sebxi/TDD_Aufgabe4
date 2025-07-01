@@ -89,11 +89,9 @@ export class ChatUI {
           loginResultDiv.textContent = `Login successful! Token: ${response.token}`;
         }
         (event.target as HTMLFormElement).reset();
-      } else {
-        if (loginResultDiv) {
+      } else if (loginResultDiv) {
           loginResultDiv.textContent = `Login failed: ${response.error && "Unknown error"}`;
         }
-      }
     } catch (err) {
       console.error("handleLogin Error:", err);
       if (loginResultDiv) loginResultDiv.textContent = "Network or server error.";
@@ -120,12 +118,10 @@ export class ChatUI {
             usersList.appendChild(li);
           });
         }
-      } else {
-        // data is an object with `error` property
-        if (usersList) {
+      // data is an object with `error` property
+      } else if (usersList) {
           usersList.innerHTML = `Error: ${data.error}`;
         }
-      }
     } catch (err) {
       console.error("handleGetUsers Error:", err);
       if (usersList) usersList.innerHTML = "Network or server error while loading users.";
@@ -149,11 +145,9 @@ export class ChatUI {
       if (response.success) {
         if (sendResultDiv) sendResultDiv.textContent = "Message successfully sent!";
         (event.target as HTMLFormElement).reset();
-      } else {
-        if (sendResultDiv) {
+      } else if(sendResultDiv) {
           sendResultDiv.textContent = `Error: ${response.error && "Unknown error"}`;
         }
-      }
     } catch (err) {
       console.error("handleSendMessage Error:", err);
       if (sendResultDiv) sendResultDiv.textContent = "Network or server error while sending message.";
