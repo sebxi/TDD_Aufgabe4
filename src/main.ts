@@ -1,5 +1,4 @@
 ﻿import { ApiService } from "./ApiService.js";
-import { ChatUI } from "./ChatUI.js";
 
 function getInputValue(id: string): string {
   return (document.getElementById(id) as HTMLInputElement)?.value || "";
