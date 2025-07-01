@@ -59,7 +59,7 @@ export class ChatUI {
         // Optionally reset form
         (event.target as HTMLFormElement).reset();
       } else if (regResultDiv) {
-          regResultDiv.textContent = `Registration failed: ${response.error || "Unknown error"}`;
+          regResultDiv.textContent = `Registration failed: ${response.error && "Unknown error"}`;
         }
       
     } catch (err) {
@@ -91,7 +91,7 @@ export class ChatUI {
         (event.target as HTMLFormElement).reset();
       } else {
         if (loginResultDiv) {
-          loginResultDiv.textContent = `Login failed: ${response.error || "Unknown error"}`;
+          loginResultDiv.textContent = `Login failed: ${response.error && "Unknown error"}`;
         }
       }
     } catch (err) {
@@ -151,7 +151,7 @@ export class ChatUI {
         (event.target as HTMLFormElement).reset();
       } else {
         if (sendResultDiv) {
-          sendResultDiv.textContent = `Error: ${response.error || "Unknown error"}`;
+          sendResultDiv.textContent = `Error: ${response.error && "Unknown error"}`;
         }
       }
     } catch (err) {
