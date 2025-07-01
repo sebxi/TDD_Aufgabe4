@@ -1,0 +1,3 @@
+Nach Recherche über die bekannten Tool habe ich mich für SonarQube entschieden, da dieses ebenfalls als Plugin für VS-Code verfügbar ist.
+
+Unter Extensions bei VS-Code habe ich dieses Tool dann installiert und für mein Projekt verwendet.
